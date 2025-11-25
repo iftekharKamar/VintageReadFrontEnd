@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { addBook,removeBook } from "../api/adminApi";
+import { createBook,removeBook } from "../api/adminApi";
 
 
 // --- Async Thunks ---
@@ -13,7 +13,7 @@ export const addBook = createAsyncThunk(
       const formData = new FormData();
       Object.keys(bookData).forEach((key) => formData.append(key, bookData[key]));
 
-      const res = await addBook(formData, token);
+      const res = await createBook(formData, token);
 
       return res.data;
     } catch (err) {

@@ -3,7 +3,7 @@ import axios from "axios";
 const API_BASE_URL = `${import.meta.env.VITE_API_URL}/admin`;
    
 // Get all books
-const addBook = async (formData, token) => {
+const createBook = async (formData, token) => {
   const response = await axios.post(`${API_BASE_URL}`,formData,{
     headers: { Authorization: `Bearer ${token}` }
   });
@@ -18,4 +18,4 @@ const removeBook = async (id, token) => {
   return response.data; // single book object
 };
 
-export { addBook, removeBook };
+export { createBook, removeBook };
