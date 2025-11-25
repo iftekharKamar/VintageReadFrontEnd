@@ -5,6 +5,8 @@ import { login, register } from "../features/authSlice.js";
 
 export default function AuthModal({ isOpen, onClose }) {
 
+  if (!isOpen) return null;
+
   const dispatch = useDispatch();
   const authState = useSelector((state) => state.auth);
   const { loading } = authState;
@@ -57,7 +59,6 @@ export default function AuthModal({ isOpen, onClose }) {
   };
 
   return(
-    <>isOpen&& {
 
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50 backdrop-blur-sm animate-fade-in no-scrollbar">
       <div className="flex min-h-full items-center justify-center p-4">
@@ -181,6 +182,5 @@ export default function AuthModal({ isOpen, onClose }) {
         </div>
       </div>
     </div>
-    }    </>
   );
 }
