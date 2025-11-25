@@ -19,7 +19,6 @@ export default function App() {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books.allBooks);
   const user = useSelector((state) => state.auth.user);
-  console.log("Current User:", user);
 
   // --- Fetch books on mount ---
   useEffect(() => {
