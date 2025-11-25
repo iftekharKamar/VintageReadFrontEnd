@@ -11,11 +11,11 @@ const createBook = async (formData, token) => {
 };
 
 // Get book details by id
-const removeBook = async (id, token) => {
+const deleteBook = async (id, token) => {
   const response = await axios.delete(`${API_BASE_URL}/books/${id}`,{
         headers: { Authorization: `Bearer ${token}` },
       });
   return response.data; // single book object
 };
 
-export { createBook, removeBook };
+export { createBook, deleteBook };

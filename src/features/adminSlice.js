@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { createBook,removeBook } from "../api/adminApi";
+import { createBook,deleteBook } from "../api/adminApi";
 
 
 // --- Async Thunks ---
@@ -27,7 +27,7 @@ export const removeBook = createAsyncThunk(
   "admin/removeBook",
   async ({ bookId, token }, { rejectWithValue }) => {
     try {
-      await removeBook(bookId, token);
+      await deleteBook(bookId, token);
       return bookId;
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || err.message);
