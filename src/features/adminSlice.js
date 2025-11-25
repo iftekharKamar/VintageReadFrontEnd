@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { addBook,removeBook } from "../api/adminApi";
 
-const API_BASE_URL = "http://localhost:3000";
 
 // --- Async Thunks ---
 
@@ -13,9 +13,7 @@ export const addBook = createAsyncThunk(
       const formData = new FormData();
       Object.keys(bookData).forEach((key) => formData.append(key, bookData[key]));
 
-      const res = await axios.post(`${API_BASE_URL}/admin`, formData, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await addBook(formData, token);
 
       return res.data;
     } catch (err) {
@@ -29,9 +27,7 @@ export const removeBook = createAsyncThunk(
   "admin/removeBook",
   async ({ bookId, token }, { rejectWithValue }) => {
     try {
-      await axios.delete(`${API_BASE_URL}/admin/books/${bookId}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await removeBook(bookId, token);
       return bookId;
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || err.message);
