@@ -1,16 +1,94 @@
-# React + Vite
+Vintage Reads – Online Bookstore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack MERN application where users can browse books, add them to cart, manage authentication, and admins can create/remove books.
 
-Currently, two official plugins are available:
+🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Frontend: (https://vintagereadfrontend-1.onrender.com/)
+Backend: (https://vintagereadsbackend.onrender.com)
 
-## React Compiler
+📁 Project Structure
+/client  → React + Redux frontend  
+/server  → Node.js + Express + MongoDB backend
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✨ Features
+👤 User Features
 
-## Expanding the ESLint configuration
+User Registration & Login (JWT Authentication)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Login using Google OAuth (optional)
+
+Browse all books
+
+View book details
+
+Add/remove/update cart
+
+Protected checkout page
+
+Search books by title
+
+Login popup modal (AuthModal)
+
+🛒 Cart Features
+
+Add book to cart
+
+Update quantity
+
+Remove items
+
+Checkout redirection (requires login)
+
+🛠 Admin Features
+
+Admin uses same login system 
+
+Create Books – /admin/create
+
+Delete Books – /admin/books/:id
+
+Admin Dashboard UI
+
+Protected admin routes
+
+⚙️ Backend Features
+
+REST API built with Express
+
+MongoDB Atlas database
+
+JWT authentication + role-based access
+
+Secure password hashing (bcrypt)
+
+CORS enabled for production
+
+🧰 Tech Stack
+Frontend
+
+React.js (Vite)
+
+Redux Toolkit
+
+TailwindCSS
+
+Axios
+
+Lucide Icons
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB (Mongoose)
+
+bcrypt.js
+
+jsonwebtoken
+
+cors
+
+dotenv
