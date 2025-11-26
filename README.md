@@ -16,7 +16,7 @@ Experience the application live:
 
 | Component | URL |
 | :--- | :--- |
-| **Frontend** (Vercel) | [https://vintagereadfrontend-1.onrender.com](https://vintagereadfrontend-1.onrender.com) |
+| **Frontend** (Render) | [https://vintagereadfrontend-1.onrender.com](https://vintagereadfrontend-1.onrender.com) |
 | **Backend** (Render) | [https://vintagereadsbackend.onrender.com](https://vintagereadsbackend.onrender.com) |
 
 ---
